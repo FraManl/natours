@@ -1,0 +1,9 @@
+# use prettier with eslint (otherwise will not work)
+# remember that --save-dev install packages as dev dependencies locally. We need this below to be installed locally in order to work...
+
+$ npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-ally eslint-plugin-react --save-devnpm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-ally eslint-plugin-react --save-dev
+
+npm i validator
+npm i ndb (nodejs debugger)
+
+node --inspect-brk server.js >>>     chrome://inspect

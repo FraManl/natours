@@ -1,0 +1,80 @@
+Ubuntu version : $ lsb_release -a
+
+#### MongoDb Temp solution ####
+$ sudo rm -rf /tmp/mongodb-27017.sock
+$ sudo service mongod start
+
+$ sudo chown -R mongodb:mongodb /var/lib/mongodb
+$ sudo chown mongodb:mongodb /tmp/mongodb-27017.sock
+
+
+Uninstall mongodb : 
+$ sudo service mongod stop
+$ sudo apt-get purge mongodb-org*
+
+Remove folders : 
+sudo rm -r /var/log/mongodb
+sudo rm -r /var/lib/mongodb
+
+Check Mongodb Status :
+$ sudo systemctl status mongod
+
+Enable Mongodb :
+$ sudo systemctl enable mongod
+
+Stop Mongodb :
+$ sudo systemctl stop mongod
+
+Restart Mongodb :
+$ sudo systemctl restart mongod
+
+Start Mongodb :
+$ sudo systemctl start mongod
+
+Start Mongodb (if fail) :
+$ sudo systemctl daemon-reload
+
+Check config file
+sudo nano /etc/systemd/system/mongodb.service
+
+
+
+
+Uninstall MongoDb
+#######################
+sudo apt purge mongodb-org*
+sudo rm -r /var/log/mongodb
+sudo rm -r /var/lib/mongodb
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+sudo apt update
+sudo apt-get install -y mongodb-org
+#######################
+
+
+NODEMON PORT ALREADY IN USE
+###########################"
+Killing a process that owns port 3000
+Unix-like Operating Systems (e.g. GNU/Linux, FreeBSD, macOS)
+First, let’s take a look at how we can kill a process that has a port open.
+
+Using the lsof command, we can retrieve the PID that has the given port:
+
+$ lsof -i :3000 -t
+12345
+Then we can kill this process just by doing:
+
+$ kill 12345
+Let’s turn this into a one-liner:
+
+lsof -i :3000 -t | xargs kill
+If you’re using environment variable to set the server port, we can specify that instead of hardcoding our values:
+
+lsof -i :${PORT} -t | xargs kill
+Lastly, we can default to port 3000 if environment variable isn’t set:
+
+lsof -i :${PORT:-3000} -t | xargs kill"
+
+
+
+

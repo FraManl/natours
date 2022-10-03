@@ -1,0 +1,12 @@
+configure workspace
+$ git config --global user.name "xx"
+$ git config --global user.email "xx@xx.com"
+
+create repository
+$ git init
+
+add all files
+$ git add -A
+
+status
+$ git status

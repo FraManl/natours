@@ -1,0 +1,27 @@
+doctype html
+html 
+    head
+        title Natours
+        //- <link rel="stylesheet" href="css/style.css"> pug recognizes css & html as well
+        // this comment will appear in template final html
+        //- this comment won't
+        link(rel="stylesheet" href="css/style.css")
+        link(rel="shortcut icon" type='image/png' href="img/favicon.png")
+        
+    body
+        //- everything after the = is treated as javascript
+        h1=tour
+        //- buffered code, can also write JS here 
+
+        h1=tour.toUpperCase()
+        // can also write unbuffered code, using dash
+        - const x = 9;
+        h1=x*3
+
+        // can also write code with interpolation
+        h1 Natours : #{tour}
+
+
+        p This is just some text
+
+
