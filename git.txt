@@ -10,3 +10,9 @@ $ git add -A
 
 status
 $ git status
+
+commit
+$ git commit -m "message"
+
+commit 1 file
+$ git add app.js
