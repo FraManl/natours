@@ -16,3 +16,12 @@ $ git commit -m "message"
 
 commit 1 file
 $ git add app.js
+
+add remote branch
+$ git remote add origin https://github.com/FraManl/natours.git
+
+push local code to remote repository / branch
+$ git push origin master
+
+extract code from remote repository / branch
+$ git pull origin master
